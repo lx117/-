@@ -1,2 +1,2 @@
 # SlidetoUnlock
-common slide to unlock for android
+一共三个模块更新白名单列表，网络防火墙，实时检测非法应用服务
