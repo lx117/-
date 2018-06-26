@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ProgressWheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llToast"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout 
+    android:layout_width="wrap_content"  
+    android:layout_height="wrap_content"  
+    android:orientation="vertical"  
+    android:gravity="center">
+  
+    <ProgressBar  
+        android:id="@+id/waitingbar"  
+        android:layout_width="60dp"  
+        android:layout_height="60dp"  
+        android:layout_gravity="center"    
+        android:indeterminate="false"
+         />  
+  
+  
+</RelativeLayout>
+
+    <TextView
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:paddingTop="12dp"
+        android:text="加载中" 
+        android:visibility="gone"/>
+
+</LinearLayout>

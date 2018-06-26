@@ -1,0 +1,16 @@
+{
+    "password":"2048",
+    "list":[
+		"com.sohu.inputmethod.sogou",
+		"com.google.android.inputmethod.pinyin",
+        "com.a121tongbu.asx.quanrizhi.app.android.pad",
+		"com.resilio.sync",
+		"com.hjwordgames",
+        "jianrt.slidetounlock",
+        "cn.wps.moffice_eng",
+        "com.youdao.dict",
+        "com.wenba.bangbang",
+        "com.baidu.homework",
+        "com.android.packageinstaller"
+    ]
+}

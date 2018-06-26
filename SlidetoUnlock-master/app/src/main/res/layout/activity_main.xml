@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="jianrt.slidetounlock.activity.MainActivity"
+    >
+
+
+
+  <android.support.v7.widget.CardView
+      android:id="@+id/cv2"
+      tools:targetApi="lollipop"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_marginBottom="8dp"
+      android:clickable="true"
+      android:foreground="?android:attr/selectableItemBackground"
+      android:layout_marginTop="25dp"
+      app:cardCornerRadius="4dp"
+      app:cardUseCompatPadding="true"
+      app:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_blue_500">
+
+      <TextView
+          android:text="更新信任列表"
+          android:textColor="@color/material_white"
+          android:gravity="center"
+          android:layout_centerInParent="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="14dp"
+          android:layout_marginStart="14dp"
+          android:layout_marginTop="30dp"
+          android:layout_marginEnd="30dp"
+          android:layout_marginRight="20dp"
+          android:id="@+id/updata" />
+
+    </RelativeLayout>
+
+  </android.support.v7.widget.CardView>
+
+  <android.support.v7.widget.CardView
+      android:id="@+id/cv4"
+      tools:targetApi="lollipop"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginLeft="8dp"
+      android:layout_marginRight="8dp"
+      android:layout_marginBottom="8dp"
+      android:clickable="true"
+      android:foreground="?android:attr/selectableItemBackground"
+      android:layout_marginTop="25dp"
+      app:cardCornerRadius="4dp"
+      app:cardUseCompatPadding="true"
+      app:cardPreventCornerOverlap="false">
+
+    <RelativeLayout
+        android:id="@+id/rl4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/material_blue_500">
+
+      <TextView
+          android:text="防火墙"
+          android:textColor="@color/material_white"
+          android:gravity="center"
+          android:layout_centerInParent="true"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginLeft="14dp"
+          android:layout_marginStart="14dp"
+          android:layout_marginTop="30dp"
+          android:layout_marginEnd="30dp"
+          android:layout_marginRight="20dp" />
+
+    </RelativeLayout>
+
+  </android.support.v7.widget.CardView>
+  <LinearLayout
+      android:id="@+id/query_ll"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_margin="8dp">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_grey_200"
+        android:layout_marginTop="20dp">
+    </View>
+  <EditText
+      android:id="@+id/password"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="10dp"
+      android:imeOptions="actionUnspecified"
+      android:inputType="textPassword"
+      android:maxLines="1"
+      android:gravity="center"
+      android:hint="输入密码后可查看程序禁用列表"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/material_grey_200">
+    </View>
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv3"
+        tools:targetApi="lollipop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false">
+
+      <RelativeLayout
+          android:id="@+id/rl3"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/material_blue_500">
+
+        <TextView
+            android:text="查询列表"
+            android:textColor="@color/material_white"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="20dp"
+            android:id="@+id/query_list" />
+
+      </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+  </LinearLayout>
+
+  <LinearLayout
+      android:id="@+id/list_ll"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="8dp"
+      android:orientation="vertical"
+      android:visibility="gone">
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv1"
+        tools:targetApi="lollipop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_marginTop="25dp"
+        app:cardCornerRadius="4dp"
+        app:cardUseCompatPadding="true"
+        app:cardPreventCornerOverlap="false">
+
+      <RelativeLayout
+          android:id="@+id/rl1"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/material_blue_500">
+
+        <TextView
+            android:text="开启程序检测服务"
+            android:textColor="@color/material_white"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="30dp"
+            android:id="@+id/OpenOrClose"
+            android:layout_marginRight="20dp" />
+
+      </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:text="禁用列表（点击图标解除禁用）："
+      android:textSize="16sp"
+      android:gravity="center_vertical"
+      android:padding="8dp"/>
+  <com.jude.easyrecyclerview.EasyRecyclerView
+      android:id="@+id/recyclerView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+  </com.jude.easyrecyclerview.EasyRecyclerView>
+  </LinearLayout>
+</LinearLayout>

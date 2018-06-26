@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao'
+//apply plugin: 'android-apt'
+android {
+  compileSdkVersion 24
+  buildToolsVersion '26.0.2'
+  defaultConfig {
+    applicationId "jianrt.slidetounlock"
+    minSdkVersion 15
+    targetSdkVersion 24
+    versionCode 2
+    versionName "1.1"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+  lintOptions {
+    abortOnError false
+  }
+
+/*针对greenDao的一些配置*/
+  greendao {
+    schemaVersion 2 //数据库版本号
+    daoPackage 'jianrt.slidetounlock.greendao.gen' //自动生成的工具类的包名
+    targetGenDir 'src/main/java' //路径
+  }
+  packagingOptions {
+    exclude 'META-INF/rxjava.properties'
+  }
+}
+
+buildscript {
+  repositories {
+    jcenter()
+    mavenCentral()
+    google()
+  }
+
+  dependencies {
+    classpath 'com.android.tools.build:gradle:3.0.1'
+    classpath 'org.greenrobot:greendao-gradle-plugin:3.2.1'
+  }
+}
+allprojects {
+  repositories {
+    maven { url "https://jitpack.io" }
+    google()
+  }
+}
+dependencies {
+  compile fileTree(include: ['*.jar'], dir: 'libs')
+  androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    exclude group: 'com.android.support', module: 'support-annotations'
+  })
+  compile project(':LibMarsdaemon')
+  compile 'com.romainpiel.shimmer:library:1.4.0@aar'
+  compile 'com.android.support:appcompat-v7:24.2.1'
+  compile 'com.android.support:support-annotations:23.4.0'
+  compile 'com.android.support:support-v4:24.0.0-beta1'
+  compile 'eu.chainfire:libsuperuser:1.0.0.+'
+  compile 'com.github.akarnokd:rxjava2-interop:0.8.2'
+  //compile 'com.google.android.gms:play-services-maps:9.8.0'
+  compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.jude:easyrecyclerview:4.4.0'
+  // compile 'com.google.android.gms:play-services-plus:9.8.0'
+  compile 'io.reactivex:rxandroid:1.2.1'
+  compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+  compile 'com.squareup.retrofit2:retrofit:2.1.0'
+  compile 'com.squareup.retrofit2:retrofit-adapters:2.1.0'
+  compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+  compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+  compile 'org.greenrobot:greendao:3.2.0'
+  compile 'com.github.zhaokaiqiang.klog:library:1.6.0'
+  compile 'com.jakewharton:butterknife:8.4.0'
+ // apt 'com.jakewharton:butterknife-compiler:8.4.0'
+  annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
+  compile 'com.google.code.gson:gson:2.2.4'
+  compile 'com.squareup.okhttp3:logging-interceptor:3.4.1'
+  compile 'com.squareup.okhttp3:okhttp:3.4.1'
+  compile 'com.android.support:cardview-v7:24.2.1'
+  compile 'com.zzhoujay.materialcolors:materialcolors:1.0.0'
+   compile 'com.github.ybq:Android-SpinKit:1.1.0'
+  compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+
+}
